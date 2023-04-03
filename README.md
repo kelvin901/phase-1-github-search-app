@@ -1,74 +1,40 @@
-# GitHub Search App
+Flatdango code challenge
+Description
+This code challenge is about a mini-web application called Flatdango which allows the user to purchase movie tickets from the Flatiron movie theater.The user should be able to see a list of film titles on the left menu and the details of the first film on a card at the center of the page. When the user clicks on a film title, they should be able to see the films details displayed on the card at the center.There is also a buy ticket button on the card bottom that allows the user to purchase a movie ticket.
 
-## Learning Goals
+To run the application:
 
-- Practice accessing information from APIs and using it to update the DOM
-- Practice listening for user events and updating the DOM in response
+Alternative one.
+Click on the Github pages link provided and you will be directed to the mini-web application directly.
 
-## Instructions
+    https://kelvin901.github.io/flatdango-wk3-code-challenge/
+Alternative two.
+Installation
+To be able to run this program on your computer:
 
-You will be using the GitHub API for this project. You can view documentation
-for this API [here](https://developer.github.com/v3/). This is an open API: no
-API key or authentication is required for the endpoints we will be using.
+Open the terminal on your computer.
 
-Notice the GitHub API documentation includes the following excerpt:
+Clone the repo from github using:
 
-> By default, all requests to <https://api.github.com> receive the v3 version of
-> the REST API. We encourage you to explicitly request this version via the
-> Accept header.
+git clone https://github.com/kelvin901/flatdango-wk3-code-challenge.git
+Change directory into the repo folder:
 
-They require you to add a custom header to your requests:
+cd flatdango-wk3-code-challenge
+Open it in Visual Studio Code:
 
-```text
-Accept: application/vnd.github.v3+json
-```
+    code .
+Running the application
+To run the application in alternative two
 
-### [User Search Endpoint](https://developer.github.com/v3/search/#search-users)
+Open a new terminal and copy the command below:
 
-You can search for users matching a certain name. For example, if we wanted to
-find all users named `octocat`, we would make a `GET` request to
-`https://api.github.com/search/users?q=octocat`. To view the response, you can
-copy and paste that URL into your browser.
+  google-chrome index.html 
+This enables us to run our html file in the browser.
 
-This endpoint is rate limited. This means the API will stop returning data if
-you make more than
-[10 requests per minute](https://developer.github.com/v3/search/#rate-limit).
+Project set up
+Once the index.html file is running in the browser, you should be directed to a window which is displaying the mini-web application.In the mini-web application,there is a title showing the movie theater and a subtitle explaining the mini-web apps main function.We also have a left side bar that contains the title of the films that are available and a card displaying the details of our first film by default. Upon clicking of a specific film title, you should see a card display showing the details of the film title selected. The card shows the title of the film, its poster image, movie description, the movies runtime and showtime, and the available tickets for purchasing. There is also a buy ticket button at the bottom of the card, which when you double-click, you should see the available tickets number decrease, meaning that the user has purchased a ticket.When the available tickets reach zero, the button changes to sold out and you cannot buy any more tickets.
 
-### [User Repos Endpoint](https://developer.github.com/v3/repos/#list-user-repositories)
+Details of Author
+This challenge was contributed by:
 
-You can find all the public repositories for a user using this endpoint. For
-example if we wanted to find all the repositories for a user with GitHub
-username `octocat`, we would make a `GET` request to
-`https://api.github.com/users/octocat/repos`. To view the response, you can copy
-and paste that URL into your browser.
-
-This endpoint is rate limited. This endpoint will stop returning data if you
-make more than
-[60 requests in an hour](https://developer.github.com/v3/#rate-limiting).
-
-## Deliverables
-
-You are going to build a JavaScript application which searches GitHub for users
-by name and displays the results on the screen. Clicking on a specific user will
-show all the repositories for that user.
-
-1. The `index.html` file has a form with a search input. When the form is
-   submitted, it should take the value of the input and search GitHub for user
-   matches using the [User Search Endpoint](#user-search-endpoint).
-2. Using the results of the search, display information about the users to the
-   page. (You might include showing their username, avatar and a link to their
-   profile.)
-3. Clicking on one of these users should send a request to the
-   [User Repos Endpoint](#user-repos-endpoint) and return data about all the
-   repositories for that user.
-4. Using the response from the Users Repos Endpoint, display all the
-   repositories for that user on the page.
-
-## Bonus
-
-- Toggle the search bar between searching for users by keyword and searching for
-  repos by keyword by adding an extra button. Hint: you can use the same search
-  bar for this, but you may need to create a variable which stores what the
-  current search type is (user or repo). The endpoint to search repositories by
-  keyword is
-  [here](https://developer.github.com/v3/search/#search-repositories).
+Kelvin Nyoike
